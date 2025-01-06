@@ -1,0 +1,343 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #697565;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu {
+    margin-top: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 28px;
+    right: 20px;
+}
+
+.cart-icon a {
+    color: rgb(255, 255, 255); /* Keranjang kuning */
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+/* Container Produk */
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+    grid-auto-rows: minmax(350px, auto); /* Baris dengan tinggi minimal 350px */
+    gap: 30px; /* Jarak antar produk */
+    padding: 20px;
+    background-color: #ffffff;
+    flex-grow: 1; /* Isi ruang layar untuk footer */
+}
+
+.container:hover > :not(:hover) {
+    opacity: 0.4;
+}
+
+/* Card Produk */
+.card {
+    background-color: #ffffff;
+    color: #000;
+    width: 65%; 
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.6s ease;
+}
+
+.product-name {
+    color: black; /* Ubah warna teks menjadi hitam */
+}
+
+.product-name:hover {
+    color: #ff0000; /* Opsional: Ubah warna saat di-hover */
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 
+                0 4px 8px rgb(255, 255, 255); /* Bayangan lebih menyala dengan warna cerah */
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card p {
+    margin: 10px 0;
+    min-height: 50px; /* Tinggi minimum untuk deskripsi */
+}
+
+.card .price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.card button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #c0392b;
+}
+/* Gaya untuk popup cart */
+/* Popup Cart */
+.popup-cart {
+    display: none; /* Popup disembunyikan secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Konten Popup Cart */
+.popup-cart-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative; /* Untuk menempatkan tombol close di kanan atas */
+}
+
+/* Judul Popup Cart */
+.popup-cart-content h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px; /* Memberi jarak bawah untuk header */
+}
+
+/* Cart Item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    justify-content: flex-start;
+}
+
+/* Gambar Produk */
+.cart-item img {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px; /* Memberi jarak lebih banyak antara gambar dan teks */
+}
+
+/* Teks Item di Cart */
+.cart-item .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Setiap elemen teks dalam cart item */
+.cart-item .details p {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 14px;
+}
+.cart-item .details .price{
+    text-align: left;
+}
+
+.cart-item .details .quantity{
+    text-align: left;
+}
+.cart-item .details .subtotal {
+    text-align: left;
+}
+/* Tombol Remove */
+.remove-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Mengubah radius agar lebih bulat */
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center; 
+    padding: 5px 10px;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b; /* Warna saat hover */
+}
+
+/* Total Keranjang */
+.cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Tombol Checkout */
+#checkout-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Tombol Close Popup */
+#close-popup-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #999;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#close-popup-cart:hover {
+    color: #e74c3c;
+}
+
+/* Untuk tampilan keranjang jika kosong */
+.cart-items p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+.footer {
+    background-color: #000000; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    padding: 20px; /* Jarak dalam */
+    display: flex; /* Flexbox untuk membagi kolom */
+    justify-content: space-around; /* Jarak antar kolom */
+    text-align: center; /* Teks di tengah */
+    position: relative;
+    bottom: 0;
+    width: auto;
+}
+  
+.footer-column {
+    flex: 1; /* Semua kolom memiliki lebar yang sama */
+    margin: 0 10px; /* Jarak antar kolom */
+}    
+  
+.footer-column h3 {
+    margin-bottom: 10px; /* Jarak bawah heading */
+    font-size: 18px; /* Ukuran font heading */
+    text-transform: uppercase; /* Ubah teks ke huruf besar */
+}
+  
+.footer-column p {
+    margin: 10px 0; /* Jarak antar paragraf */
+    font-size: 10px; /* Ukuran font teks biasa */
+}
+  
+.footer-column a {
+    display: inline-block; /* Tampilkan tautan sebagai blok sebaris */
+    margin: 10px; /* Jarak antar ikon */
+}
+  
+.footer-column img {
+    width: 25px; /* Ukuran ikon media sosial */
+    height: 22px; /* Pastikan proporsi */
+    transition: transform 0.3s; /* Efek hover */
+    border-radius: 5px;
+    background-color: none;
+    display: block;
+}
+  
+.footer-column img:hover {
+    transform: scale(1.2); /* Perbesar ikon saat hover */
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 produk per baris */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 produk per baris */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 produk per baris */
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scent & Science</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">One Perfume Co.</div>
+        <div class="menu">
+            <a href="index.php">Home</a>
+            <a href="product.php">Product</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="cart-icon">
+            <a href="javascript:void(0);" onclick="showPopupCart()">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cartCount" class="cart-count">0</span> <!-- Notification for cart items -->
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Section 1: Scent & Science -->
+        <div class="section">
+            <img src="img/peneliti.jpg" alt="Scientist working with laboratory equipment">
+            <h2>SCENT & SCIENCE</h2>
+        </div>
+        <div class="section">
+            <p class="quote">"EVERY BIOME HAS IT'S UNIQUE SCENT"</p>
+            <p>We are eager to push our products further with technology. We work closely with Europe-certified perfumers and source our main accents from Europe.</p>
+            <p>ONE PERFUME CO provides high-quality perfume supported with unique Scent Technology known as Wonder Biome Technology for its first launch. Each scent reacts to every individual biome without disturbing it, because every biome has its unique scent.</p>
+        </div>
+
+        <!-- Section 2: Abstractly Iconic -->
+        <div class="section image-left">
+            <img src="img/about.jpg" alt="Perfume bottle with smoke">
+            <div class="text">
+                <h2>ABSTRACTLY ICONIC</h2>
+                <p>ONE PERFUME CO started with an idea: "How is it a perfume, when you spray it, smells slightly different for each individual, just like a planet with its ozone?" And thus, an icon was born. Catch the shift from abstraction thinking. ONE PERFUME CO is determined to develop a product that is outstanding and represents your unique essence. When you spray it, your skin screams, "This is Me." A scent that is iconically you.</p>
+            </div>
+        </div>
+
+        <!-- Popup Cart -->
+        <div id="popup-cart" class="popup-cart">
+            <div class="popup-cart-content">
+                <button id="close-popup-cart" class="close-btn">&times;</button> <!-- Close button -->
+                <h3>Your Cart</h3>
+                <div id="popup-cart-items" class="cart-items">
+                    <!-- Cart items will appear here -->
+                </div>
+                <div class="cart-total">
+                    <p id="popup-cart-total">Total: Rp 0</p>
+                </div>
+                <button id="checkout-btn">Checkout</button>      
+            </div>                        
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-column">
+            <h3>SPONSORED BY:</h3>
+            <p>MYKONOS PERFUME</p>
+            <p>HINT PERFUME</p>
+            <p>ONIX PERFUME</p>
+            <p>PROJECT1945</p>
+            <p>ZIMAYA PERFUME</p>
+            <p>DAVIDOFF PERFUME</p>
+            <p>BALI SURFERS PERFUME</p>
+            <p>SAFF&C0 PERFUME</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>ADDRESS</h3>
+            <p>Jl. Taman Malaka Selatan No.8,</p>
+            <p>RT.8/RW.8, Pd. Klp.,</p>
+            <p>Kec. Duren Sawit,</p>
+            <p>Kota Jakarta Timur.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+            <a href="https://wa.me/+6285777498629" target="_blank">
+                <img src="img/wa.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/gienzazdn_/" target="_blank">
+                <img src="img/ig.jpg" alt="Instagram">
+            </a>
+            <a href="mailto:gienza144@gmail.com" target="_blank">
+                <img src="img/email.png" alt="Email">
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
